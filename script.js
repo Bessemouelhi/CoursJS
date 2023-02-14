@@ -12,7 +12,7 @@ const phrase2 = `Bonjour je m\'appelle ${prenom} ${nom}, j\'ai ${age} ans`;
 console.log(phrase2);
 
 var myday  = new Date();
-alert(myday.toLocaleDateString("fr-FR"));
+//alert(myday.toLocaleDateString("fr-FR"));
 
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 var today  = new Date();
@@ -40,3 +40,31 @@ for (const key in tabPage) {
         console.log(key + " " + element);
     }
 }
+
+var a = 42;
+var b = 4.2;
+var c = -42;
+var d = "42";
+
+alert("ma variable a est de type : " + typeof(a) + //number
+"\nma variable b est de type : " + typeof(b) + //number
+"\nma variable c est de type : " + typeof(c) + //number
+"\nma variable d est de type : " + typeof(d) //string
+);
+
+var machaine = "exemple";
+var maChaine = new String("exemple");
+
+alert("ma variable machaine est de type : " + typeof(machaine) + //ma variable machaine est de type : string
+"\nma variable maChaine est de type : " + typeof(maChaine)); //ma variable maChaine est de type : object
+
+var n = null;
+var u = undefined;
+var nn = NaN;
+
+alert("ma variable n est de type : " + typeof(n) + //ma variable n est de type : object
+"\nma variable u est de type : " + typeof(u) + //ma variable u est de type : undefined
+"\nma variable nn est de type : " + typeof(nn)); //ma variable nn est de type : number
+
+
+
