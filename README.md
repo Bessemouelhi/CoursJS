@@ -35,7 +35,7 @@ alert("ma variable a est de type : " + typeof(a) +
 );
 ```
 <p align="center"><img src="img/js_code_alert1.png"></img></p>
-![js_code_alert1](img/js_code_alert1.png)
+![js_code_alert1](img\js_code_alert1.png)
 
 ``` 
 var mahaine = "exemple";
