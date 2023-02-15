@@ -46,25 +46,40 @@ var b = 4.2;
 var c = -42;
 var d = "42";
 
-alert("ma variable a est de type : " + typeof(a) + //number
+/*alert("ma variable a est de type : " + typeof(a) + //number
 "\nma variable b est de type : " + typeof(b) + //number
 "\nma variable c est de type : " + typeof(c) + //number
 "\nma variable d est de type : " + typeof(d) //string
-);
+);*/
 
 var machaine = "exemple";
 var maChaine = new String("exemple");
 
-alert("ma variable machaine est de type : " + typeof(machaine) + //ma variable machaine est de type : string
-"\nma variable maChaine est de type : " + typeof(maChaine)); //ma variable maChaine est de type : object
+/*alert("ma variable machaine est de type : " + typeof(machaine) + //ma variable machaine est de type : string
+"\nma variable maChaine est de type : " + typeof(maChaine)); //ma variable maChaine est de type : object*/
 
 var n = null;
 var u = undefined;
 var nn = NaN;
 
-alert("ma variable n est de type : " + typeof(n) + //ma variable n est de type : object
+/*alert("ma variable n est de type : " + typeof(n) + //ma variable n est de type : object
 "\nma variable u est de type : " + typeof(u) + //ma variable u est de type : undefined
-"\nma variable nn est de type : " + typeof(nn)); //ma variable nn est de type : number
+"\nma variable nn est de type : " + typeof(nn)); //ma variable nn est de type : number*/
 
 
 
+var heureOuverture = 9;
+var heureFermeture = 17;
+var heureArrive = 12;
+
+if(heureArrive < heureOuverture) {
+    alert("Trop tot !");
+} else if (heureOuverture <= heureArrive && heureArrive < heureFermeture) {
+    if(heureArrive < 12) {
+        alert("Bienvenue ! C'est le matin !");
+    } else {
+        alert("Bienvenue ! C'est l'après midi !");
+    }
+} else {
+    alert("Trop tard ! Revenez demain !");
+}

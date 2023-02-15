@@ -2,7 +2,6 @@
 # Cours de JavaScript
 ## <p align="center"> Introduction au JavaScript</p>
 
-<<<<<<< HEAD
 JavaScript est un **langage de programmation de scripts** principalement employé dans **les pages web interactives** et à ce titre est une partie essentielle des applications web. Avec les langages HTML et CSS, JavaScript est au cœur des langages utilisés par les développeurs web.
 
 ## Qu’est-ce qu’une variable ?
@@ -58,7 +57,24 @@ alert("ma variable n est de type : " + typeof(n) +
 ```
 
 <p align="center"><img src="img\js_code_alert3.png"></img></p>
-=======
-JavaScript est un **langage de programmation de scripts** principalement employé dans **les pages web interactives** et à ce titre est une partie essentielle des applications web. Avec les langages HTML et CSS, JavaScript est au cœur des langages utilisés par les développeurs web.  
-bravo
->>>>>>> a698c18c57e9fb55b14cadd665bfbd16a8a901d4
+
+## Les opérateurs mathématique
+
+```
+var x = 32;
+var y = 5;
+var z = 2;
+
+alert(y)
+
+y += z //équivaut y = y + z
+alert(y) //renvoi 7
+y *= z //équivaut y = y * z
+alert(y) //renvoi 14
+y -= z //équivaut y = y - z
+alert(y) //renvoi 12
+y /= z //équivaut y = y / z
+alert(y) //renvoi 6
+y %= z //équivaut y = y % z
+alert(y) //renvoi 0
+```
