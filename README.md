@@ -90,4 +90,4 @@ alert(y) //renvoi 0
 | <	| Permet de tester si une valeur est strictement inférieure à une autre | 
 | >	 | Permet de tester si une valeur est strictement supérieure à une autre |
 | <=	| Permet de tester si une valeur est inférieure ou égale à une autre |
- |>=	| Permet de tester si une valeur est supérieure ou égale à une autre |
+| >=	| Permet de tester si une valeur est supérieure ou égale à une autre |
