@@ -129,5 +129,5 @@ var myArrayStr = ["a", "b", "c"];
 | map(el => el * 2); | [2, 4, 6] crée un nouveau tableau avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.|
  | some(el => el > 2); | true passe le test implémenté par la fonction fournie. Elle renvoie un booléen indiquant le résultat du test.|
  | filter(el => el > 1) |  [2,3] renvoi tous les éléments qui respectent la condition|
- | every(el => el > 1);|
- | reverse();|
+ | every(el => el > 1);| false renvoi true ou false si au moins un élément respecte la condition |
+ | reverse();| inverse tout les éléments du tableau |
