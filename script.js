@@ -193,7 +193,7 @@ console.log(carreDiv);
 carreDiv.map((el, index) => {
     console.log("index : " + index);
     if (index % 2 == 0) {
-        el.style.backgroundColor = 'rgb(0, 0, 255)'; 
+        el.style.backgroundColor = 'rgb(0, 0, 255)';
     }
 });
 
