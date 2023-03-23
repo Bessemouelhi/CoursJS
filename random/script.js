@@ -203,8 +203,8 @@ for (let index = 0; index < filteredArr.length; index++) {
     
 }
 
-/*let body = document.getElementsByTagName('body');
-document0.insertAdjacentHTML(carreDiv);*/
+let body = document.getElementsByTagName('body');
+document0.insertAdjacentHTML(carreDiv);
 
 /*div.forEach(element => {
     console.log(element); 
@@ -212,39 +212,5 @@ document0.insertAdjacentHTML(carreDiv);*/
         element.style.backgroundColor = 'rgb(255, 0, 0)';
     }
 });*/
+console.log(div); 
 
-//console.log(div); 
-
-/*let exempleArray = ['A', 'B', 'C'];
-
-for (let i = 0; i < exempleArray.length; i++) {
-    console.log(exempleArray[i]);
-}*/
-
-let tab1 = [0, 1, 2, 3];
-
-//console.log(tab1.push(4, 5));
-
-tab1.push(tab1[2] + tab1[3])
-
-console.log(tab1);
-
-let fibo = [0, 1]
-let somme = 0;
-/*while (somme < 50) {
-    somme = fibo[fibo.length-1] + fibo[fibo.length-2];
-    fibo.push(somme);
-}*/
-console.log(fibo);
-
-for (let somme = 0; somme < 50; somme = fibo[fibo.length-1] + fibo[fibo.length-2]) {
-    if(somme > 0)
-        fibo.push(somme)
-}
-console.log(fibo);
-
-fibo = [0, 1, 1]
-for (let i = 1; fibo[i] + fibo[i+1] < 50; i++) {
-    fibo.push(fibo[i] + fibo[i+1]);
-}
-console.log(fibo);
