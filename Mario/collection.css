@@ -13,8 +13,13 @@ body{
 }
 
 .jeu{
-    border: 2px solid violet;
-    border-radius: 20px;
+    border-radius:5px;
+    width: 300px;
+    margin: 10px auto;
+    padding: 25px;
+    background: rgba(175, 23, 3, 0.3);
+    border: 2px solid #3d2e2e;
+    border-radius: 60px/20px;
 }
 
 .overlay{
