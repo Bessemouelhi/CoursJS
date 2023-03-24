@@ -1,20 +1,26 @@
-let numbersOne = [1, 2, 3];
-let numbersTwo = [4, 5, 6];
-let numbersThree = [7, 8, 9];
-let numbersFour = [10, 11, 12];
-let numbersCombined = [...numbersOne, ...numbersTwo];
-let numbersPushed = [];
-const btnPop = document.getElementsByClassName('POPUPjeu');
-numbersPushed.push(numbersThree, numbersFour);
-
-document.write(numbersCombined+"\n");
-document.write(numbersPushed+"\n");
+// let numbersOne = [1, 2, 3];
+// let numbersTwo = [4, 5, 6];
+// let numbersThree = [7, 8, 9];
+// let numbersFour = [10, 11, 12];
+// let numbersCombined = [...numbersOne, ...numbersTwo];
+// let numbersPushed = [];
+//numbersPushed.push(numbersThree, numbersFour);
+//document.write(numbersCombined+"\n");
+//document.write(numbersPushed+"\n");
 
 // console.log("numbersCombined : " + numbersCombined);
 // console.log("numbersPushed : " + numbersPushed);
 
 // console.log(numbersCombined);
 // console.log(numbersPushed);
+
+const btnPop = document.getElementsByClassName('POPUPjeu');
+const cross = document.getElementById('cross');
+const popup = document.querySelector('.popup');
+
+console.log(cross);
+
+
 
 function mario(titre, date, platform, description, logo) {
     this.titre = titre;
@@ -75,38 +81,49 @@ Object.values(maCollection).map( (el, index) => {
     myBody.innerHTML += inHtml;
 })
 
+
+
+///////////////////////////////////////////////////////MODAL///////////////////////////////////////////////////////
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+//var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+let popTitre = document.getElementById('titre');
+let popDate = document.getElementById('date');
+let popPlatform = document.getElementById('platform');
+let popDesc = document.getElementById('description');
+
+// When the user clicks the button, open the modal 
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
+
 for (let index = 0; index < btnPop.length; index++) {
     let key = btnPop[index].id;
     console.log(key);
     btnPop[index].addEventListener('click' ,(e) => {
         console.log(maCollection[key].titre);
+        modal.style.display = "block";
+        popTitre.innerText = maCollection[key].titre;
+        popDate.innerText = maCollection[key].date;
+        popPlatform.innerText = maCollection[key].platform;
+        popDesc.innerText = maCollection[key].description;
     })
 }
 
-// myBody.innerHTML = '<h2>' + mario1.titre + '</h2>';
-// for (const key in myCollec) {
-//     console.log(myCollec[key]);
-//     const element = myCollec[key];
-//     myBody.innerHTML = '<h2>' + element.titre + '</h2>';
-// }
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
-// myCollec.forEach((value, key) => {
-//     const element = value;
-//     myBody.innerHTML += '<h2>' + element.titre + '</h2>';
-// });
-
-console.log(myCollec);
-
-// function MaCollection(...obj) {
-//     let collection = [];
-//     collection.push(obj);
-//     function ajoute(obj) {
-//         this.collection.push(obj);
-//     }
-// }
-
-// let maCollec = new MaCollection(mario1);
-// maCollec.ajoute(mario2);
-// maCollec.ajoute(mario3);
-
-// console.log(maCollec);
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

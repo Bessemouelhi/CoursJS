@@ -16,3 +16,29 @@ body{
     border: 2px solid violet;
     border-radius: 20px;
 }
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: .4s;
+    /* visibility: visible; */
+    /* opacity: 0; */
+}
+
+/* .overlay:target {
+    visibility: inherit;
+    opacity: 1;
+} */
+
+.popup{
+    margin: 6rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    width: 40%;
+    position: relative;
+}
