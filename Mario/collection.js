@@ -44,7 +44,7 @@ let mario8 = new mario("Super mario 64", 1996, "Nintendo 64", "");
 let mario9 = new mario("Super mario Sunshine", 2002, "GameCube", "");
 let mario10 = new mario("Super mario Galaxy", 2007, "Wii", "");
 
-let myCollec = new Map();
+/*let myCollec = new Map();
 myCollec.set(1, mario1);
 myCollec.set(2, mario2);
 myCollec.set(3, mario3);
@@ -54,7 +54,7 @@ myCollec.set(6, mario6);
 myCollec.set(7, mario7);
 myCollec.set(8, mario8);
 myCollec.set(9, mario9);
-myCollec.set(10, mario10);
+myCollec.set(10, mario10);*/
 
 let maCollection = {
     ...{
@@ -126,24 +126,56 @@ let popDate = document.getElementById('date');
 let popPlatform = document.getElementById('platform');
 let popDesc = document.getElementById('description');
 let popLogo = document.getElementById('logo');
+let btnPrevious = document.getElementById('btnPrevious');
+let btnNext = document.getElementById('btnNext');
 
 // When the user clicks the button, open the modal 
 // btn.onclick = function() {
 //   modal.style.display = "block";
 // }
 
+let currentModalIndex = -1;
+
 for (let index = 0; index < btnPop.length; index++) {
     let key = btnPop[index].id;
     console.log(key);
     btnPop[index].addEventListener('click', (e) => {
-        console.log(maCollection[key].titre);
+        displayModal(key);
+
+        currentModalIndex = index;
+    })
+}
+
+btnNext.addEventListener('click', () => {
+    if(currentModalIndex+1 < btnPop.length)
+        currentModalIndex++;
+    else if(currentModalIndex == btnPop.length-1)
+        currentModalIndex = 0;
+
+    let key = btnPop[currentModalIndex].id;
+    displayModal(key);
+})
+
+btnPrevious.addEventListener('click', () => {
+    if(currentModalIndex > 0)
+        currentModalIndex--;
+    else if(currentModalIndex == 0)
+        currentModalIndex = btnPop.length-1;
+
+    let key = btnPop[currentModalIndex].id;
+    displayModal(key);
+})
+
+function displayModal(key) {
+    console.log(maCollection[key].titre);
         modal.style.display = "block";
         popTitre.innerText = maCollection[key].titre;
         popDate.innerText = maCollection[key].date;
         popPlatform.innerText = maCollection[key].platform;
         popDesc.innerText = maCollection[key].description;
         popLogo.src = 'img/'+maCollection[key].logo;
-    })
+        
+        console.log("currentModalIndex : " + currentModalIndex);
 }
 
 // When the user clicks on <span> (x), close the modal
