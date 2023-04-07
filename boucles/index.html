@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Boucles for</title>
+</head>
+<body>
+    <script>
+        //FOR
+        let chaine = "Lorem ipsum";
+        for (let index = 0; index < chaine.length; index++) {
+            console.log(chaine[index]);
+        }
+
+        //FOR OF
+        let tab = [1, 2, 3];
+        let somme = 0;
+        for (const i of tab) {
+            somme += i;
+        }
+        console.log("somme = ", somme);
+
+        //FOR IN
+        let objet = {a:1, b:2, c:3}
+        for (const key in objet) {
+            console.log(key);
+        }
+
+        //FOREACH
+        tab.forEach((element, index) => {
+            tab[index] = element + 10;
+        });
+        console.log(tab);
+
+        //MAP
+        let newTab = tab.map((element) => {
+            return element * 10;
+        })
+        console.log(newTab);
+
+        /*Écrire une fonction qui prend un tableau de chaînes de caractères en entrée et
+        renvoie un nouveau tableau avec les chaînes de caractères en majuscules.*/
+        let tabChaine = ['zuzanna', 'marie-claire', 'romain'];
+        let newTabChaine = tabChaine.map((element) => {
+            return element.toUpperCase();
+        })
+        console.log(newTabChaine);
+
+        /*Écrire une fonction qui prend un tableau d'objets en entrée et renvoie un nouveau
+        tableau avec les propriétés "name" de chaque objet.*/
+        let tabObjet = [
+            {nom:'toto', age:30}, {nom:'titi', age:25}, {nom:'tata', age:32}
+        ]
+        console.log(tabObjet);
+        let newTabObjet = tabObjet.map((element) => {
+            console.log(element);
+            return {"name": element};
+        })
+        console.log(newTabObjet);
+
+        /*Écrire une fonction qui prend un tableau d'objets en entrée et renvoie un nouveau
+        tableau avec les objets filtrés selon une propriété. Ex: nous filtrons tous les objets
+        qui ont une propriété age dont la valeur est supérieure à 30.*/
+        let tabAge = tabObjet.filter((element) => {
+            if (element.age > 30)
+                return element;
+        })
+        console.log(tabAge);
+
+
+        let chiffres = [1, 2, 3, 4, 5];
+
+        for (const key in chiffres) {
+            console.log(key + " : ", chiffres[key]);
+        }
+        for (const value of chiffres) {
+            console.log(value);
+        }
+        chiffres.forEach(element => {
+            console.log(element);
+        });
+
+        let newChiffres = chiffres.map((element) => {
+            return element.toString();
+        })
+        console.log(newChiffres);
+        let newChiffresCarre = chiffres.map((element) => {
+            return Math.pow(element, 2);
+        })
+        console.log(newChiffres);
+        let newChiffresReverse = chiffres.map((element) => {
+            return '1/' + element;
+        })
+        console.log(newChiffresReverse);
+    </script>
+</body>
+</html>
